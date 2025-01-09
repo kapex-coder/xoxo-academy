@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Arial Unicode MS", Arial, sans-serif;
+}
+
+.down-arrow {
+  --t: 50%;
+  --h: 60%;
+  clip-path: polygon(
+    calc(50% - var(--t) / 2) 0,
+    calc(50% - var(--t) / 2) calc(100% - var(--h)),
+    0 calc(100% - var(--h)),
+    50% 100%,
+    100% calc(100% - var(--h)),
+    calc(50% + var(--t) / 2) calc(100% - var(--h)),
+    calc(50% + var(--t) / 2) 0
+  );
+}
