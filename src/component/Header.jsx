@@ -101,7 +101,7 @@ const Header = () => {
       </div>
 
       <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-end sm:gap-4 lg:gap-20 -mt-3">
-        <ul className="sm:flex sm:items-center sm:gap-4 lg:gap-14 flex-1">
+        <ul className="sm:flex sm:items-center sm:justify-end sm:gap-4 lg:gap-14 flex-1">
           {navLinks.slice(3).map((navLink) => (
             <li className="uppercase">
               <CustomNavLink href={navLink.href}>{navLink.label}</CustomNavLink>
