@@ -22,14 +22,21 @@ const navLinks = [
   },
 ];
 
-const CustomNavLink = ({ href, className, children, ...props }) => {
+const CustomNavLink = ({
+  href,
+  className,
+  closeDrawer,
+  children,
+  ...props
+}) => {
   return (
     <a
       href={href}
       className={twMerge(
-        "text-sm md:text-lg lg:text-xl text-nowrap font-medium hover:text-customGreen [text-shadow:1px_1px_3px_rgba(255,255,255,0.8)]",
+        "uppercase text-sm md:text-lg lg:text-xl text-nowrap font-medium hover:text-customGreen [text-shadow:1px_1px_3px_rgba(255,255,255,0.8)]",
         className
       )}
+      onClick={closeDrawer}
       {...props}>
       {children}
     </a>
@@ -56,25 +63,36 @@ const Drawer = () => {
       </button>
 
       <div
-        className={`fixed top-0 left-0 h-full bg-purple-800 bg-opacity-90 transition-transform transform ${
+        className={`fixed top-0 left-0 bottom-0 h-full bg-purple-800 bg-opacity-90 transition-transform transform ${
           isDrawerOpen ? "translate-x-0" : "-translate-x-full"
         } w-80 z-50`}>
-        {/* Close Button */}
         <button
-          className="absolute text-3xl text-customGreen top-4 right-4 focus:outline-none"
+          className="absolute text-customGreen font-bold top-4 right-4 focus:outline-none"
           onClick={closeDrawer}>
-          ✕
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="3em"
+            height="3em"
+            viewBox="0 0 16 16">
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.6"
+              d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"
+            />
+          </svg>
         </button>
-        <div className="flex flex-col items-center h-full space-y-6 mt-14 sm:space-y-8 md:space-y-10">
-          {navLinks.map((navItem) => {
+        <div className="flex flex-col h-full space-y-6 mt-14 ml-12 sm:space-y-8 md:space-y-10">
+          {navLinks.map((navLink) => {
             return (
-              <a
-                key={navItem.label}
-                href={navItem.href}
-                className="text-lg text-white sm:text-xl md:text-2xl hover:text-customGreen"
-                onClick={closeDrawer}>
-                {navItem.label}
-              </a>
+              <CustomNavLink
+                href={navLink.href}
+                className="text-2xl"
+                closeDrawer={closeDrawer}>
+                {navLink.label}
+              </CustomNavLink>
             );
           })}
         </div>
@@ -103,7 +121,7 @@ const Header = () => {
       <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-end sm:gap-4 lg:gap-20 -mt-3">
         <ul className="sm:flex sm:items-center sm:justify-end sm:gap-4 lg:gap-14 flex-1">
           {navLinks.slice(3).map((navLink) => (
-            <li className="uppercase">
+            <li>
               <CustomNavLink href={navLink.href}>{navLink.label}</CustomNavLink>
             </li>
           ))}

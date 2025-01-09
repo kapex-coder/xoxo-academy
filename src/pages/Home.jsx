@@ -5,7 +5,7 @@ import EnrollNow from "../component/EnrollNow";
 
 const Home = () => {
   return (
-    <div className="relative max-sm:h-[calc(100vh-55px)] h-screen text-white bg-purple-900">
+    <div className="relative max-sm:h-[calc(100vh-55px)] h-screen max-h-[920px] text-white bg-purple-900">
       <Section
         className="z-50 h-full"
         containerClassName="px-8 flex-grow flex flex-col justify-between"
