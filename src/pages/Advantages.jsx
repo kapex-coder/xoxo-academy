@@ -56,8 +56,8 @@ const Advantages = () => {
   return (
     <Section
       id="advantages"
-      className="bg-purple-900 min-h-screen font-spartan"
-      containerClassName="flex-grow flex flex-col text-white pb-8"
+      className="bg-purple-900 font-spartan"
+      containerClassName="flex-grow flex flex-col text-white md:pt-6 pb-8 md:pb-10"
       isSectionFooter>
       <h2 className="text-4xl xl:text-5xl text-white [text-shadow:1px_2px_3px_rgba(255,255,255,0.8)] font-bold my-8 md:mt-8 xl:mt-10 w-full inline-flex max-md:flex-col max-md:items-center items-end justify-center gap-3">
         <span>Get the</span>
