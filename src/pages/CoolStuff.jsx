@@ -1,5 +1,10 @@
 import React from "react";
 import Section from "../component/Section";
+import EmblaCarousel from "../component/Carousel/EmblaCarousel";
+
+const OPTIONS = { loop: true };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const CoolStuff = () => {
   return (
@@ -9,9 +14,12 @@ const CoolStuff = () => {
         be able to do in our program
       </h2>
       <Section
-        className="bg-purple-900 h-20"
+        className="bg-purple-900"
         containerClassName="h-full">
-        CoolStuff
+        <EmblaCarousel
+          slides={SLIDES}
+          options={OPTIONS}
+        />
       </Section>
       <p className="px-8 py-6 text-center text-[#6711a4] max-w-screen-sm mx-auto">
         We do not just teach our students, we get them ready to be Creators.
