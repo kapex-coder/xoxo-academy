@@ -19,3 +19,7 @@ body {
     calc(50% + var(--t) / 2) 0
   );
 }
+
+.waves {
+  background-image: url('/src/Assets/waves.png');
+}

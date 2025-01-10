@@ -26,7 +26,7 @@ const Section = ({
     <div
       className={twMerge(
         "relative",
-        `${isSectionFooter && "flex flex-col justify-between"}`,
+        `${isSectionFooter ? "flex flex-col justify-between" : ""}`,
         className
       )}
       {...rootProps}>

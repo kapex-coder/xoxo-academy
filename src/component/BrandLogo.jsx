@@ -6,7 +6,7 @@ const BrandLogo = ({ className }) => {
   return (
     <div
       className={twMerge(
-        "relative overflow-hidden w-52 h-28 sm:w-40 sm:h-20 lg:w-60 lg:h-32 xl:w-72",
+        "relative overflow-hidden w-52 h-28 sm:w-40 sm:h-20 lg:w-60 lg:h-36 xl:w-72",
         className
       )}>
       <img
