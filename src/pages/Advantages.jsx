@@ -73,7 +73,7 @@ const Advantages = () => {
         <ul className="h-full flex-grow flex max-md:flex-col items-center justify-evenly md:gap-8">
           {advantages.map((advantage, index) => (
             <li
-              key={advantage}
+              key={index}
               className={twMerge(
                 "flex-grow flex md:flex-col items-center gap-4",
                 index % 2 !== 0 && "flex-row-reverse"

@@ -3,8 +3,28 @@ import Section from "../component/Section";
 import EmblaCarousel from "../component/Carousel/EmblaCarousel";
 
 const OPTIONS = { loop: true };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+const SLIDES = [
+  {
+    src: "https://www.youtube.com/embed/triSuFvgfdw?si=zcfBa6LIlbjjcyYt",
+    title: "YouTube video player",
+  },
+  {
+    src: "https://www.youtube.com/embed/Qqi1GSEr0f8?si=_Yx3vpdoEO4yp4o7",
+    title: "YouTube video player",
+  },
+  {
+    src: "https://www.youtube.com/embed/ayn38DVuKdY?si=RF3kXdF5O7BYW3Ao",
+    title: "YouTube video player",
+  },
+  {
+    src: "https://www.youtube.com/embed/vS_owi6xeS0?si=kD4fwYQ_htEMcgQD",
+    title: "YouTube video player",
+  },
+  {
+    src: "https://www.youtube.com/embed/F35fUtsVgzo?si=Y2Ypne1LBCEmcMhD",
+    title: "YouTube video player",
+  },
+];
 
 const CoolStuff = () => {
   return (
@@ -15,7 +35,7 @@ const CoolStuff = () => {
       </h2>
       <Section
         className="bg-purple-900"
-        containerClassName="h-full">
+        containerClassName="h-full py-6">
         <EmblaCarousel
           slides={SLIDES}
           options={OPTIONS}

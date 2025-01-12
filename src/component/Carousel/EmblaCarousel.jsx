@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import {
   NextButton,
@@ -9,7 +9,7 @@ import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 
 import "../../styles/embla.css";
 
-const TWEEN_FACTOR_BASE = 0.52;
+const TWEEN_FACTOR_BASE = 0.12;
 
 const numberWithinRange = (number, min, max) =>
   Math.min(Math.max(number, min), max);
@@ -19,6 +19,7 @@ const EmblaCarousel = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const tweenFactor = useRef(0);
   const tweenNodes = useRef([]);
+  const [dragStart, setDragStart] = useState(false);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -78,6 +79,20 @@ const EmblaCarousel = (props) => {
     });
   }, []);
 
+  //   const handleInteractionStart = useCallback(() => {
+  //     const iframes = document.querySelectorAll("iframe");
+  //     iframes.forEach((iframe) => {
+  //       iframe.style.pointerEvents = "none";
+  //     });
+  //   }, []);
+
+  //   const handleInteractionEnd = useCallback(() => {
+  //     const iframes = document.querySelectorAll("iframe");
+  //     iframes.forEach((iframe) => {
+  //       iframe.style.pointerEvents = "auto";
+  //     });
+  //   }, []);
+
   useEffect(() => {
     if (!emblaApi) return;
 
@@ -94,23 +109,40 @@ const EmblaCarousel = (props) => {
   }, [emblaApi, tweenScale]);
 
   return (
-    <div className="embla">
+    <div
+      className="embla"
+      //   onMouseDown={handleInteractionStart}
+      //   onTouchStart={handleInteractionStart}
+      //   onMouseUp={handleInteractionEnd}
+      //   onTouchEnd={handleInteractionEnd}
+    >
       <div
         className="embla__viewport"
         ref={emblaRef}>
-        <div className="embla__container">
-          {slides.map((index) => (
+        <div
+          className="embla__container"
+          onMouseDown={() => setDragStart(true)}
+          onMouseUp={() => setDragStart(false)}>
+          {slides.map((slide, index) => (
             <div
-              className="embla__slide"
+              className="embla__slide flex-[0_0_80%] sm:flex-[0_0_60%] md:flex-[0_0_50%] lg:flex-[0_0_40%]"
               key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+              <div className="embla__slide__number rounded-lg overflow-hidden">
+                <iframe
+                  className={`w-full h-[150px] sm:h-[205px] lg:h-[220px]`}
+                //   ${dragStart && "pointer-events-none"}
+                  src={slide.src}
+                  title={slide.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
       <div className="embla__controls">
-        <div className="embla__buttons">
+        <div className="embla__buttons max-md:!hidden">
           <PrevButton
             onClick={onPrevButtonClick}
             disabled={prevBtnDisabled}

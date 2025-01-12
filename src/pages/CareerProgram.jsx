@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../component/Section";
 import wavesImage from "../Assets/waves.png";
+import wavesMobileImage from "../Assets/mobile-waves.png";
 
 const CertificateProgramCard = () => {
   return (
@@ -37,7 +38,7 @@ const CareerProgram = () => {
     <Section
       id="career-program"
       className="relative overflow-hidden py-6 md:py-20"
-      containerClassName="md:px-8 ">
+      containerClassName="md:px-8">
       <div className="relative z-50 h-full flex max-md:flex-col-reverse items-center justify-between gap-3 md:gap-8 lg:gap-20">
         <div>
           <h2 className="text-3xl font-bold font-spartan mb-2">
@@ -72,6 +73,11 @@ const CareerProgram = () => {
       <img
         className="hidden md:block z-0 absolute top-0 xl:-top-12 left-0 right-0"
         src={wavesImage}
+        alt="Waves"
+      />
+      <img
+        className="block md:hidden z-0 absolute top-32 sm:top-10 left-0 right-0"
+        src={wavesMobileImage}
         alt="Waves"
       />
     </Section>

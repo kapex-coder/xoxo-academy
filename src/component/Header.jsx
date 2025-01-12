@@ -77,9 +77,9 @@ const Drawer = () => {
             <path
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.6"
               d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"
             />
           </svg>
@@ -88,6 +88,7 @@ const Drawer = () => {
           {navLinks.map((navLink) => {
             return (
               <CustomNavLink
+                key={navLink.label}
                 href={navLink.href}
                 className="text-2xl"
                 closeDrawer={closeDrawer}>
@@ -106,7 +107,9 @@ const Header = () => {
     <nav className="relative max-sm:mt-2 flex items-center justify-between sm:gap-4 lg:gap-6">
       <ul className="hidden sm:flex sm:items-center sm:gap-4 lg:gap-14 flex-1 -mt-3">
         {navLinks.slice(0, 3).map((navLink) => (
-          <li className="uppercase">
+          <li
+            key={navLink.label}
+            className="uppercase">
             <CustomNavLink href={navLink.href}>{navLink.label}</CustomNavLink>
           </li>
         ))}
@@ -121,7 +124,7 @@ const Header = () => {
       <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-end sm:gap-4 lg:gap-20 -mt-3">
         <ul className="sm:flex sm:items-center sm:justify-end sm:gap-4 lg:gap-14 flex-1">
           {navLinks.slice(3).map((navLink) => (
-            <li>
+            <li key={navLink.label}>
               <CustomNavLink href={navLink.href}>{navLink.label}</CustomNavLink>
             </li>
           ))}
