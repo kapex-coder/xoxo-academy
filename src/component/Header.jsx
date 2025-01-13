@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import BrandLogo from "./BrandLogo";
 import { twMerge } from "tailwind-merge";
 import EnrollNow from "./EnrollNow";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   {
@@ -17,7 +18,7 @@ const navLinks = [
     label: "Contact Us",
   },
   {
-    href: "#",
+    href: "/404",
     label: "Privacy",
   },
 ];
@@ -29,9 +30,24 @@ const CustomNavLink = ({
   children,
   ...props
 }) => {
+  if (href.startsWith("#")) {
+    return (
+      <a
+        href={href}
+        className={twMerge(
+          "uppercase text-sm md:text-lg lg:text-xl text-nowrap font-medium hover:text-customGreen text-shadow !font-spartan",
+          className
+        )}
+        onClick={closeDrawer}
+        {...props}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className={twMerge(
         "uppercase text-sm md:text-lg lg:text-xl text-nowrap font-medium hover:text-customGreen text-shadow !font-spartan",
         className
@@ -39,7 +55,7 @@ const CustomNavLink = ({
       onClick={closeDrawer}
       {...props}>
       {children}
-    </a>
+    </Link>
   );
 };
 

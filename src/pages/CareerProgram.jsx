@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../component/Section";
 import wavesImage from "../Assets/waves.png";
 import wavesMobileImage from "../Assets/mobile-waves.png";
+import { Link } from "react-router-dom";
 
 const CertificateProgramCard = () => {
   return (
@@ -25,9 +26,9 @@ const CertificateProgramCard = () => {
         <p className="text-3xl font-bold text-shadow">
           ₦10799/month
         </p>
-        <button className="bg-customGreen text-[#6711a4] font-bold text-md sm:text-xl px-2 py-1 rounded mt-2">
+        <Link to="/404" className="inline-block bg-customGreen text-[#6711a4] font-bold text-md sm:text-xl px-2 py-1 rounded mt-2">
           CHOOSE YOUR SYLLABUS
-        </button>
+        </Link>
       </div>
     </div>
   );
