@@ -29,7 +29,7 @@ const SLIDES = [
 const CoolStuff = () => {
   return (
     <div id="cool-stuff">
-      <h2 className="font-spartan font-bold px-8 py-4 text-3xl md:text-5xl max-w-screen-md mx-auto text-center text-[#6711a4]">
+      <h2 className="font-spartan font-bold px-8 py-4 text-4xl md:text-5xl max-w-screen-md mx-auto text-center text-[#6711a4]">
         Some of the <span className="text-customGreen">cool stuff</span> you’ll
         be able to do in our program
       </h2>

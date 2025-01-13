@@ -19,17 +19,14 @@ module.exports = {
     plugin(function ({ addUtilities }) {
       addUtilities({
         ".text-shadow-sm": {
-          "text-shadow": "1px 1px 2px rgba(0, 0, 0, 0.5)",
+          "text-shadow": "0px 2px 4px rgba(255, 255, 255, 0.35)",
         },
         ".text-shadow": {
-          "text-shadow": "2px 2px 4px rgba(0, 0, 0, 0.5)",
+          "text-shadow": "0px 2px 4px rgba(255, 255, 255, 0.5)",
         },
-        ".text-shadow-lg": {
-          "text-shadow": "4px 4px 6px rgba(0, 0, 0, 0.5)",
-        },
-        ".text-shadow-none": {
-          "text-shadow": "none",
-        },
+        ".text-shadow-blue-sm": {
+          "text-shadow": "0px 2.5px 4px rgba(103,17,164, 0.4)",
+        }
       });
     }),
   ],

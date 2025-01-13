@@ -14,7 +14,7 @@ const Home = () => {
         isSectionFooter
         isArrow>
         <Header />
-        <div className="font-bold font-spartan  flex items-end justify-between mb-6">
+        <div className="font-bold font-spartan flex items-end justify-between mb-6">
           <div>
             <div className="text-5xl xl:text-6xl max-sm:mb-6">
               BUILD YOUR <br /> FUTURE BY <br /> LEARNING <br /> VR, XR & A

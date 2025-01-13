@@ -11,7 +11,7 @@ const CertificateProgramCard = () => {
           <span className="text-customGreen">3 MONTH</span> <br /> CERTIFICATE{" "}
           <br /> PROGRAM
         </h2>
-        <ul className="text-sm list-disc ml-4 font-medium [text-shadow:1px_1px_3px_rgba(255,255,255,0.8)]">
+        <ul className="text-sm list-disc ml-4 font-medium text-shadow">
           <li>Choice of Subject in the core syllabus</li>
           <li>Study and Project materials</li>
           <li>Online and Offline Classes based on schedule</li>
@@ -22,7 +22,7 @@ const CertificateProgramCard = () => {
       <div className="p-6">
         <p className="text-sm">30% off for Limited Time Only</p>
         <p className="text-[#ff3131] text-xl line-through">₦13799/month</p>
-        <p className="text-3xl font-bold [text-shadow:1px_1px_3px_rgba(255,255,255,0.8)]">
+        <p className="text-3xl font-bold text-shadow">
           ₦10799/month
         </p>
         <button className="bg-customGreen text-[#6711a4] font-bold text-md sm:text-xl px-2 py-1 rounded mt-2">
@@ -42,15 +42,15 @@ const CareerProgram = () => {
       <div className="relative z-50 h-full flex max-md:flex-col-reverse items-center justify-between gap-3 md:gap-8 lg:gap-20">
         <div>
           <h2 className="text-3xl font-bold font-spartan mb-2">
-            <span className="text-[#6711a4] [text-shadow:1px_2px_3px_rgba(103,17,164,0.8)]">
+            <span className="text-[#6711a4] text-shadow-blue-sm">
               KICKSTART YOUR
             </span>{" "}
             <br /> LEARNING{" "}
-            <span className="text-[#6711a4] [text-shadow:1px_2px_3px_rgba(103,17,164,0.8)]">
+            <span className="text-[#6711a4] text-shadow-blue-sm">
               AND
             </span>{" "}
             CAREER <br />{" "}
-            <span className="text-[#6711a4] [text-shadow:1px_2px_3px_rgba(103,17,164,0.8)]">
+            <span className="text-[#6711a4] text-shadow-blue-sm">
               WITH US TODAY!
             </span>
           </h2>
@@ -75,11 +75,7 @@ const CareerProgram = () => {
         src={wavesImage}
         alt="Waves"
       />
-      <img
-        className="block md:hidden z-0 absolute top-32 sm:top-10 left-0 right-0"
-        src={wavesMobileImage}
-        alt="Waves"
-      />
+      <div className="w-full mobile-waves block md:hidden z-0 absolute top-24 sm:top-0 left-0 right-0 overflow-hidden h-[300px] sm:h-[480px]"></div>
     </Section>
   );
 };

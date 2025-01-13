@@ -9,11 +9,11 @@ const navLinks = [
     label: "Home",
   },
   {
-    href: "#",
+    href: "#purpose",
     label: "Purpose",
   },
   {
-    href: "#",
+    href: "mailto:info.xoxoacademy@gmail.com",
     label: "Contact Us",
   },
   {
@@ -33,7 +33,7 @@ const CustomNavLink = ({
     <a
       href={href}
       className={twMerge(
-        "uppercase text-sm md:text-lg lg:text-xl text-nowrap font-medium hover:text-customGreen [text-shadow:1px_1px_3px_rgba(255,255,255,0.8)]",
+        "uppercase text-sm md:text-lg lg:text-xl text-nowrap font-medium hover:text-customGreen text-shadow !font-spartan",
         className
       )}
       onClick={closeDrawer}
