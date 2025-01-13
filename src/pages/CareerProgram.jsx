@@ -23,7 +23,7 @@ const CertificateProgramCard = () => {
       <div className="p-6 xl:p-7">
         <p className="text-sm xl:text-base">30% off for Limited Time Only</p>
         <p className="text-[#ff3131] text-xl xl:text-2xl line-through">₦13799/month</p>
-        <p className="text-3xl xl:text-4xl font-bold">
+        <p className="text-3xl xl:text-4xl font-bold text-shadow">
           ₦10799/month
         </p>
         <Link to="/404" className="inline-block text-md sm:text-xl xl:text-2xl xl:pt-2 xl:pb-1 px-2 lg:px-3 pt-1 pb-0.5 rounded mt-2 font-bold font-spartan text-purple-900 bg-customGreen hover:bg-green-600">
