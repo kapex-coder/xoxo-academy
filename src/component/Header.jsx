@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import BrandLogo from "./BrandLogo";
 import { twMerge } from "tailwind-merge";
 import EnrollNow from "./EnrollNow";
@@ -45,6 +45,31 @@ const CustomNavLink = ({
 
 const Drawer = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const drawerRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (
+        isDrawerOpen &&
+        drawerRef.current &&
+        !drawerRef.current.contains(event.target)
+      ) {
+        setIsDrawerOpen(false);
+      }
+    };
+
+    const disableScroll = () => {
+      document.body.style.overflow = isDrawerOpen ? "hidden" : "";
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    disableScroll();
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.body.style.overflow = "";
+    };
+  }, [isDrawerOpen]);
 
   const openDrawer = () => {
     setIsDrawerOpen(true);
@@ -63,6 +88,7 @@ const Drawer = () => {
       </button>
 
       <div
+        ref={drawerRef}
         className={`fixed top-0 left-0 bottom-0 h-full bg-purple-800 bg-opacity-90 transition-transform transform ${
           isDrawerOpen ? "translate-x-0" : "-translate-x-full"
         } w-80 z-50`}>
