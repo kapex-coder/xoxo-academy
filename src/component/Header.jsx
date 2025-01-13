@@ -35,7 +35,7 @@ const CustomNavLink = ({
       <a
         href={href}
         className={twMerge(
-          "uppercase text-sm md:text-lg lg:text-xl text-nowrap font-medium hover:text-customGreen text-shadow !font-spartan",
+          "uppercase text-md md:text-lg lg:text-xl text-nowrap font-semibold hover:text-customGreen text-shadow !font-spartan",
           className
         )}
         onClick={closeDrawer}
@@ -49,7 +49,7 @@ const CustomNavLink = ({
     <Link
       to={href}
       className={twMerge(
-        "uppercase text-sm md:text-lg lg:text-xl text-nowrap font-medium hover:text-customGreen text-shadow !font-spartan",
+        "uppercase text-md md:text-lg lg:text-xl text-nowrap font-semibold hover:text-customGreen text-shadow !font-spartan",
         className
       )}
       onClick={closeDrawer}
