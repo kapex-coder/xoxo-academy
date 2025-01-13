@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 
 const CertificateProgramCard = () => {
   return (
-    <div className="bg-black text-white rounded-lg w-full min-w-[290px] max-w-[290px] sm:min-w-[310px] sm:max-w-[310px] md:min-w-[330px] md:max-w-[330px] bg-[radial-gradient(circle_at_0%_0%,#58098f,#8420cb,#373737,#6d6672)] xl:mr-16">
-      <div className="p-6">
-        <h2 className="font-spartan text-3xl font-bold leading-none mb-2">
+    <div className="bg-black text-white rounded-lg w-full min-w-[290px] max-w-[290px] sm:min-w-[310px] sm:max-w-[310px] md:min-w-[330px] md:max-w-[330px] xl:min-w-[360px] xl:max-w-[360px] bg-[radial-gradient(circle_at_0%_0%,#58098f,#8420cb,#373737,#6d6672)] xl:mr-14">
+      <div className="p-6 xl:p-7">
+        <h2 className="font-spartan text-3xl xl:text-4xl font-bold leading-none mb-2">
           <span className="text-customGreen">3 MONTH</span> <br /> CERTIFICATE{" "}
           <br /> PROGRAM
         </h2>
-        <ul className="text-sm list-disc ml-4 font-medium text-shadow">
+        <ul className="text-sm xl:text-base list-disc ml-4 font-medium ">
           <li>Choice of Subject in the core syllabus</li>
           <li>Study and Project materials</li>
           <li>Online and Offline Classes based on schedule</li>
@@ -20,13 +20,13 @@ const CertificateProgramCard = () => {
         </ul>
       </div>
       <hr className="border-2 border-white" />
-      <div className="p-6">
-        <p className="text-sm">30% off for Limited Time Only</p>
-        <p className="text-[#ff3131] text-xl line-through">₦13799/month</p>
-        <p className="text-3xl font-bold text-shadow">
+      <div className="p-6 xl:p-7">
+        <p className="text-sm xl:text-base">30% off for Limited Time Only</p>
+        <p className="text-[#ff3131] text-xl xl:text-2xl line-through">₦13799/month</p>
+        <p className="text-3xl xl:text-4xl font-bold">
           ₦10799/month
         </p>
-        <Link to="/404" className="inline-block bg-customGreen text-[#6711a4] font-bold text-md sm:text-xl px-2 py-1 rounded mt-2">
+        <Link to="/404" className="inline-block text-md sm:text-xl xl:text-2xl xl:pt-2 xl:pb-1 px-2 lg:px-3 pt-1 pb-0.5 rounded mt-2 font-bold font-spartan text-purple-900 bg-customGreen hover:bg-green-600">
           CHOOSE YOUR SYLLABUS
         </Link>
       </div>
@@ -42,7 +42,7 @@ const CareerProgram = () => {
       containerClassName="md:px-8">
       <div className="relative z-50 h-full flex max-md:flex-col-reverse items-center justify-between gap-3 md:gap-8 lg:gap-20">
         <div>
-          <h2 className="text-3xl font-bold font-spartan mb-2">
+          <h2 className="text-3xl xl:text-5xl font-bold font-spartan mb-2">
             <span className="text-[#6711a4] text-shadow-blue-sm">
               KICKSTART YOUR
             </span>{" "}
@@ -55,7 +55,7 @@ const CareerProgram = () => {
               WITH US TODAY!
             </span>
           </h2>
-          <p className="text-[#6711a4] text-lg md:text-xl max-md:text-right">
+          <p className="text-[#6711a4] text-lg md:text-xl xl:text-2xl max-md:text-right">
             Get Exclusive access to our{" "}
             <span className="text-[#d6970c]">Gold</span> Learning suite. It
             Includes a <strong>Personalised Program</strong> with{" "}

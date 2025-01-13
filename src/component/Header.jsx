@@ -3,6 +3,7 @@ import BrandLogo from "./BrandLogo";
 import { twMerge } from "tailwind-merge";
 import EnrollNow from "./EnrollNow";
 import { Link } from "react-router-dom";
+import menuIcon from "../Assets/menu-icon.png";
 
 const navLinks = [
   {
@@ -97,11 +98,17 @@ const Drawer = () => {
 
   return (
     <div className="max-sm:block hidden">
-      <button
-        className="absolute text-7xl left-0 top-1/2 -translate-y-1/2 sm:block md:block lg:hidden text-customGreen focus:outline-none"
-        onClick={openDrawer}>
-        &#8942;
-      </button>
+      {!isDrawerOpen && (
+        <button
+          className="absolute -left-2 top-1/2 -translate-y-1/4 sm:block md:block lg:hidden"
+          onClick={openDrawer}>
+          <img
+            className="w-4"
+            src={menuIcon}
+            alt="Menu Icon"
+          />
+        </button>
+      )}
 
       <div
         ref={drawerRef}
