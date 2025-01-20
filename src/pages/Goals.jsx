@@ -9,14 +9,14 @@ const Goals = () => {
       className="bg-purple-900"
       containerClassName="relative overflow-hidden md:max-w-screen-md lg:max-w-screen-lg h-full text-white md:flex md:items-end md:gap-8 pt-32 pb-24 md:py-20 lg:py-24"
       isSectionFooter>
-      <h2 className="text-4xl max-md:mb-4 md:text-5xl xl:text-6xl font-bold max-w-sm font-spartan">
+      <h2 className="text-4xl max-md:mb-4 md:text-5xl xl:text-6xl font-bold max-w-sm font-spartan text-shadow-blue-sm">
         The <span className="text-customGreen">goals</span> we are trying to
         achieve as an educating authority
       </h2>
       <p className="text-xl xl:text-2xl">
         Our goal is to help Nigerians of all ages learn{" "}
         <strong>in-demand skills</strong> like
-        <span className="text-customGreen"> VR, XR, and AI</span>, to get{" "}
+        <strong className="text-customGreen"> VR, XR, and AI</strong>, to get{" "}
         <span className="text-customGreen">
           guaranteed internships, job opportunities
         </span>

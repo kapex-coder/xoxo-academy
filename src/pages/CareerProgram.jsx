@@ -1,7 +1,6 @@
 import React from "react";
 import Section from "../component/Section";
 import wavesImage from "../Assets/waves.png";
-import wavesMobileImage from "../Assets/mobile-waves.png";
 import { Link } from "react-router-dom";
 
 const CertificateProgramCard = () => {
