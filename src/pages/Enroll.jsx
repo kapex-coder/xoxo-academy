@@ -34,9 +34,6 @@ const EnrollCard = ({ className }) => {
             ENROLL NOW
           </Link>
         </div>
-        <p className="text-center mt-1">
-          It's <span className="text-customGreen">FREE</span> to enroll
-        </p>
       </div>
     </div>
   );
@@ -47,13 +44,13 @@ const Enroll = () => {
     <>
       <Section
         id="career-program"
-        className="relative desktop-waves overflow-hidden "
+        className="relative desktop-waves overflow-hidden lg:min-h-screen"
         containerClassName="md:px-8 pt-6 pb-6 md:pb-10 max-w-[1200px]">
         <BrandLogo
           className="z-50 mx-auto mb-6"
           variant="blue"
         />
-        <div className="relative z-50 h-full flex max-md:flex-col items-center justify-between gap-3 md:gap-44 min-[920px]:gap-60 lg:gap-80">
+        <div className="relative z-50 flex-1 flex max-md:flex-col items-center justify-between gap-3 md:gap-44 min-[920px]:gap-60 lg:gap-80 lg:mt-20">
           <div className="max-w-md">
             <h2 className="uppercase text-3xl md:text-4xl lg:text-5xl font-bold font-spartan mb-2 text-[#6711a4] leading-none">
               Be a part of
