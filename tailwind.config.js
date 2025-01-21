@@ -26,6 +26,18 @@ module.exports = {
         },
         ".text-shadow-blue-sm": {
           "text-shadow": "0px 2.5px 4px rgba(103,17,164, 0.4)",
+        },
+        ".text-shadow-blue": {
+          "text-shadow": "0px 2.5px 4px rgba(103,17,164, 0.5)",
+        },
+        ".text-shadow-green-sm": {
+          "text-shadow": "0px 2.5px 4px rgba(0,255,102, 0.4)",
+        },
+        ".text-shadow-green": {
+          "text-shadow": "0px 2.5px 4px rgba(0,255,102, 0.5)",
+        },
+        ".text-shadow-green-lg": {
+          "text-shadow": "0px 2.5px 4px rgba(0,255,102, 0.6)",
         }
       });
     }),
