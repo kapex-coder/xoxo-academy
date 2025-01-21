@@ -50,7 +50,7 @@ const Enroll = () => {
           className="z-50 mx-auto mb-6"
           variant="blue"
         />
-        <div className="relative z-50 flex-1 flex max-md:flex-col items-center justify-between gap-3 md:gap-44 min-[920px]:gap-60 lg:gap-80 lg:mt-20">
+        <div className="relative z-50 flex-1 flex max-md:flex-col items-center justify-between gap-3 md:gap-44 min-[920px]:gap-60 lg:gap-80 xl:mt-20">
           <div className="max-w-md">
             <h2 className="uppercase text-3xl md:text-4xl lg:text-5xl font-bold font-spartan mb-2 text-[#6711a4] leading-none">
               Be a part of
@@ -83,7 +83,7 @@ const Enroll = () => {
       <Section
         className="bg-[radial-gradient(circle_at_0%_0%,#58098f,#8420cb,#373737,#6d6672)]"
         containerClassName="max-w-md">
-        <EnrollCard className="mx-auto md:hidden bg-none pb-1" />
+        <EnrollCard className="mx-auto md:hidden bg-none pb-8" />
       </Section>
     </>
   );
