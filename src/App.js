@@ -13,10 +13,10 @@ function App() {
       <Home />
       <Advantages />
       {/* <PartOfIndustry /> */}
-      <CareerProgram />
+      {/* <CareerProgram />
       <Goals />
       <CoolStuff />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
