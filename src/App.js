@@ -10,8 +10,8 @@ import CoolStuff from "./pages/CoolStuff";
 function App() {
   return (
     <>
-      <Home />
-      <Advantages />
+      {/* <Home />
+      <Advantages /> */}
       {/* <PartOfIndustry /> */}
       {/* <CareerProgram />
       <Goals />
